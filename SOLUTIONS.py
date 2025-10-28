@@ -19,3 +19,13 @@ class Solution:
             return True
         else:
             return False
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dupe = {}
+
+        for i, j in enumerate(nums):
+            delta = target - j
+            if delta in dupe:
+                return[dupe[delta], i]
+            dupe[j] = i
